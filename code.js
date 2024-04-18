@@ -1,12 +1,13 @@
 function mergesort(array) {
-    while (array.length() > 1)
-        split(array);
+    while (array.length() > 1) {
+        split(array); }
     return array;
 }
 
 function split(array) {
     let left = array.splice(0, array.length()/2)
     return merge(split(left), split(array));
+}
 
 function merge(left, right) {
     let array = [];
