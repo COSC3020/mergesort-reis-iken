@@ -5,7 +5,7 @@ function mergesort(array) {
 }
 
 function split(array) {
-    let left = array.splice(0, array.length()/2)
+    let left = array.splice(0, array.length()/2);
     return merge(split(left), split(array));
 }
 
