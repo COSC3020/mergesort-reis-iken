@@ -1,4 +1,4 @@
-function merge(array) {
+function mergesort(array) {
     let length = array.length;
     let temp = new Array(length);
     for (let i = 1; i < length; i *= 2) {
