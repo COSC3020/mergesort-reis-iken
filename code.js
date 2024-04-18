@@ -1,20 +1,39 @@
 function mergesort(array) {
-    while (array.length > 1) {
-        split(array); }
+    let length = arr.length;
+    let temp = new Array(len);
+
+    for (let i = 1; i < length; i *= 2) {
+        for (let leftbegin = 0; leftbegin < len; leftbegin += 2 * i) {
+            let middle = Math.min(leftbegin + i, length);
+            const rightbegin = Math.min(leftbegin + 2 * i, length);
+            merge(array, temp, leftbegin, middle, rightbegin);
+        }
+    }
     return array;
 }
 
-function split(array) {
-    let left = array.splice(0, array.length/2);
-    return merge(split(left), split(array));
-}
+function merge(array, temp, leftbegin, middle, rightbegin) {
+    let left = leftbegin;
+    let right = middle;
+    let index = leftbegin;
 
-function merge(left, right) {
-    let array = [];
-    while (left.length > 0 && right.length > 0) {
-        if (left[0] > right[0] {
-            array.push(left[0]); }
-        else {
-            array.push(right[0]); }
+    while (left < middle && right < rightbegin) {
+        if (array[left] <= array[right]) {
+            temp[index++] = array[left++];
+        } else {
+            temp[index++] = array[right++];
+        }
     }
-    return [...array, ...left, ...right]; }
+
+    while (left < middle) {
+        temp[index++] = array[left++];
+    }
+
+    while (right < rightbegin) {
+        temp[index++] = array[right++];
+    }
+
+    for (let i = leftbegin; i < rightbegin; i++) {
+        array[i] = temp[i];
+    }
+}
