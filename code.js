@@ -1,11 +1,11 @@
-function mergesort(array) {
+function merge(array) {
     let length = array.length;
     let temp = new Array(length);
     for (let i = 1; i < length; i *= 2) {
         for (let leftbegin = 0; leftbegin < length; leftbegin += 2 * i) {
             let middle = Math.min(leftbegin + i, length);
             const rightbegin = Math.min(leftbegin + 2 * i, length);
-            merge(array, temp, leftbegin, middle, rightbegin);
+            sort(array, temp, leftbegin, middle, rightbegin);
         }
     }
     return array;
