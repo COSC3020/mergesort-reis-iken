@@ -15,3 +15,21 @@ part of the array each recursive call considers.
 Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
+
+**MY ANSWER:**
+
+Since the outer loop splits into 2 halves, and the inner loop performs n iterations, we can come up with the following equation:
+
+$T(n) = 2T(n/2) + cn$
+
+$T(n) = 4T(n/4) + 2cn$
+
+$T(n) = 2^iT(n/2^i) + icn$
+
+$T(n) = nT(1) + cn\log_{2} n$
+
+$T(n) = n + n\log_{2} n$
+
+We know that the worst case is the same as the average and best cases for this algorithm since there are no conditions (no way to bypass the outer or inner loop).
+
+So we can conclude that the $\Theta$ bound for the worst-case runtime is $\Theta$(nlog(n))$
