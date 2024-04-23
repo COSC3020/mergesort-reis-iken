@@ -1,8 +1,8 @@
 function mergesort(array) {
     let length = array.length;
-    for (let i = 1; i < length; i *= 2) {
-        for (let leftbegin = 0; leftbegin < length; leftbegin += 2 * i) {
-            let middle = Math.min(leftbegin + i, length);
+    for (let i = 1; i * 2 < length; i *= 2) {
+        for (let leftbegin = 0; leftbegin < length - i; leftbegin += 2 * i) {
+            let middle = leftbegin + i;
             const rightbegin = Math.min(leftbegin + 2 * i, length);
             sort(array, leftbegin, middle, rightbegin);
         }
