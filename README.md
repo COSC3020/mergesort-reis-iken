@@ -18,17 +18,17 @@ markdown file.
 
 **MY ANSWER:**
 
-Since the outer loop splits into 2 halves, and the inner loop performs n iterations, we can come up with the following equation:
+Since the outer loop splits into 2 halves, and the merging of the sorted halves takes O(n) time, we can come up with the following equation:
 
-$T(n) = 2T(n/2) + cn$
+$T(n) = 2T(n/2) * O(n)$
 
-$T(n) = 4T(n/4) + 2cn$
+$T(n) = 4T(n/4) * O(n)$
 
-$T(n) = 2^iT(n/2^i) + icn$
+$T(n) = 2^iT(n/2^i) * O(n)$
 
-$T(n) = nT(1) + cn\log_{2} n$
+$T(n) = nT(1) * \log_{2} n$
 
-$T(n) = n + n\log_{2} n$
+$T(n) = n * \log_{2} n$
 
 We know that the worst case is the same as the average and best cases for this algorithm since there are no conditions (no way to bypass the outer or inner loop).
 
