@@ -18,7 +18,7 @@ markdown file.
 
 **MY ANSWER:**
 
-Since the outer loop splits into 2 halves, and the merging of the sorted halves takes O(n) time, we can come up with the following equation:
+Since the outer loop splits into 2 halves, and the merging of the sorted halves takes n time, we can come up with the following equation:
 
 $T(n) = 2T(n/2) * n$
 
