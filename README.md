@@ -18,18 +18,10 @@ markdown file.
 
 **MY ANSWER:**
 
-Since the outer loop splits into 2 halves, and the merging of the sorted halves takes n time, we can come up with the following equation:
+The mergesort function should have a time complexity of nlog(n) considering the fact that I am incrementing both the outer loop and the inner loop exponentially, and the time it takes to merge the subarrays is n.
 
-$T(n) = 2T(n/2) * n$
+The sort function should have a time complexity of n considering it iterates through all the elements once.
 
-$T(n) = 4T(n/4) * n$
-
-$T(n) = 2^iT(n/2^i) * n$
-
-$T(n) = nT(1) * \log_{2} n$
-
-$T(n) = n * \log_{2} n$
-
-We know that the worst case is the same as the average and best cases for this algorithm since there are no conditions (no way to bypass the outer or inner loop).
+Since the dominant term here is nlog(n), we can ignore the term n.
 
 So we can conclude that the $\Theta$ bound for the worst-case runtime is $\Theta$(nlog(n))$
