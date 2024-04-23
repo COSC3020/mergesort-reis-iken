@@ -20,11 +20,11 @@ markdown file.
 
 Since the outer loop splits into 2 halves, and the merging of the sorted halves takes O(n) time, we can come up with the following equation:
 
-$T(n) = 2T(n/2) * O(n)$
+$T(n) = 2T(n/2) * n$
 
-$T(n) = 4T(n/4) * O(n)$
+$T(n) = 4T(n/4) * n$
 
-$T(n) = 2^iT(n/2^i) * O(n)$
+$T(n) = 2^iT(n/2^i) * n$
 
 $T(n) = nT(1) * \log_{2} n$
 
