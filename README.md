@@ -18,10 +18,10 @@ markdown file.
 
 **MY ANSWER:**
 
-The mergesort function should have a time complexity of nlog(n) considering the fact that I am incrementing both the outer loop and the inner loop exponentially, and the time it takes to merge the subarrays is n.
+The mergesort function should have a time complexity of log(n) considering the fact that I am incrementing both the outer loop and the inner loop exponentially.
 
-The sort function should have a time complexity of n considering it iterates through all the elements once.
+The sort function actually has a time complexity of n^2 considering the outer loop could iterate for up to n times, and the inner loop could also iterate up to n times.
 
-Since the dominant term here is nlog(n), we can ignore the term n.
+Since mergesort iteratively calls sort(), then our worst-case runtime should be n^2 * log(n).
 
-So we can conclude that the $\Theta$ bound for the worst-case runtime is $\Theta$(nlog(n))$
+So we can conclude that the $\Theta$ bound for the worst-case runtime is $\Theta$(n^2log(n))$
