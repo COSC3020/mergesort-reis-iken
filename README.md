@@ -24,4 +24,4 @@ The sort function actually has a time complexity of n^2 considering the outer lo
 
 Since mergesort iteratively calls sort(), then our worst-case runtime should be n^2 * log(n).
 
-So we can conclude that the $\Theta$ bound for the worst-case runtime is $\Theta$(n^2log(n))$
+So we can conclude that the $\Theta$ bound for the worst-case runtime is $\Theta(n^2log(n))$
